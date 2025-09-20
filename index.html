@@ -9,14 +9,14 @@
   </head>
   <body>
     <header>
-      <h1>ESDLA · Biblioteca de PDFs</h1>
-      <p class="hint">Selecciona un PDF para abrirlo en esta misma página. Máximo 4 a la vez.</p>
+      <h1>VISOR DE TABLAS DEL SEÑOR DE LOS ANILLOS</h1>
+      <p class="hint">Selecciona una tabla para abrirla en esta misma página. Máximo 4 a la vez!!!</p>
     </header>
 
     <main>
       <!-- Barra de control -->
       <section class="toolbar" aria-label="Selección de PDF">
-        <label for="pdfSelect" class="sr-only">Elegir PDF</label>
+        <label for="pdfSelect" class="sr-only">Elige tabla</label>
         <select id="pdfSelect" class="select">
           <!-- Las opciones se insertan por JS desde assets/js/app.js -->
         </select>
@@ -30,12 +30,11 @@
         <!-- Las tarjetas PDF se renderizan por JS -->
       </section>
 
-      <p id="limitMsg" class="limit-msg" hidden>Solo puedes abrir hasta 4 PDFs a la vez.</p>
+      <p id="limitMsg" class="limit-msg" hidden>Recuerda... Solo puedes abrir hasta 4 PDFs a la vez.</p>
     </main>
 
     <footer>
-      Consejo: guarda los archivos en <code>/pdf</code>. Puedes añadir más elementos
-      a la lista editando <code>assets/js/app.js</code>.
+      <p>Desarrollado por Hordark</p>
     </footer>
 
     <script src="./assets/js/app.js"></script>
