@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
+    <!-- Barra superior de botones -->
+    <nav class="toolbar" aria-label="Navegación principal" style="position: sticky; top: 0; z-index: 10;">
+      <a href="./combate.html" class="btn" title="Ir a Combate">Combate</a>
+    </nav>
+
     <header>
       <h1>VISOR DE TABLAS DEL SEÑOR DE LOS ANILLOS</h1>
       <p class="hint">Selecciona una tabla para abrirla en esta misma página. Máximo 4 a la vez!!!</p>
@@ -18,7 +23,7 @@
       <section class="toolbar" aria-label="Selección de PDF">
         <label for="pdfSelect" class="sr-only">Elige tabla</label>
         <select id="pdfSelect" class="select">
-          <!-- Las opciones se insertan por JS desde assets/js/app.js -->
+          <!-- Rellenado por app.js -->
         </select>
         <button id="openBtn" class="btn" type="button" title="Abrir PDF seleccionado">
           Abrir
@@ -26,9 +31,7 @@
       </section>
 
       <!-- Contenedor de visores PDF (2x2) -->
-      <section id="pdfGrid" class="pdf-grid one" aria-live="polite">
-        <!-- Las tarjetas PDF se renderizan por JS -->
-      </section>
+      <section id="pdfGrid" class="pdf-grid one" aria-live="polite"></section>
 
       <p id="limitMsg" class="limit-msg" hidden>Recuerda... Solo puedes abrir hasta 4 PDFs a la vez.</p>
     </main>

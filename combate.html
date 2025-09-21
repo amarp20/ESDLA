@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ESDLA · Combate</title>
+    <meta name="description" content="Cálculos de combate para ESDLA." />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Barra superior de botones (mismo aspecto) -->
+    <nav class="toolbar" aria-label="Navegación principal" style="position: sticky; top: 0; z-index: 10;">
+      <a href="./index.html" class="btn" title="Volver al inicio">Inicio</a>
+    </nav>
+
+    <header>
+      <h1>COMBATE</h1>
+      <p class="hint">Calculadora de tiradas (versión de prueba con Filo + Coraza).</p>
+    </header>
+
+    <main>
+      <!-- Tipo de arma -->
+      <section class="toolbar" aria-label="Tipo de arma">
+        <div style="display:flex; flex-direction:column; gap:6px; width:100%; max-width:600px; margin:0 auto;">
+          <label for="armaSelect">Elige tipo de arma</label>
+          <select id="armaSelect" class="select">
+            <option value="" selected disabled>— Selecciona —</option>
+            <option value="FILO">Filo</option>
+            <option value="CONTUNDENTE">Contundente</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Fila de BO / BD / Tirada / Armadura -->
+      <section aria-label="Parámetros de combate" style="max-width: var(--maxw); margin: 0 auto; padding: 8px 16px;">
+        <div style="display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap;">
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label for="boInput">BO</label>
+            <input id="boInput" class="select" type="text" inputmode="numeric" maxlength="4" placeholder="0000" style="width:100px; text-align:center;">
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label for="bdInput">BD</label>
+            <input id="bdInput" class="select" type="text" inputmode="numeric" maxlength="4" placeholder="0000" style="width:100px; text-align:center;">
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label for="tiradaInput">Tirada</label>
+            <input id="tiradaInput" class="select" type="text" inputmode="numeric" maxlength="4" placeholder="0000" style="width:100px; text-align:center;">
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label for="armaduraSelect">Armadura</label>
+            <select id="armaduraSelect" class="select" style="min-width:220px;">
+              <option value="" selected disabled>— Selecciona —</option>
+              <option value="CORAZA">Coraza</option>
+              <option value="COTA_DE_MALLA">Cota de malla</option>
+              <option value="CUERO_ENDURECIDO">Cuero endurecido</option>
+              <option value="CUERO">Cuero</option>
+              <option value="SIN_ARMADURA">Sin armadura</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Botón Calcular -->
+        <div style="display:flex; justify-content:flex-start; gap:12px; margin-top:14px;">
+          <button id="calcBtn" class="btn" type="button">Calcular</button>
+        </div>
+
+        <!-- Resultado -->
+        <div id="calcResultado" style="margin-top:14px; font-size:1.05rem; background:#111827; border:1px solid #1f2937; border-radius:10px; padding:12px; max-width:600px;">
+          <!-- Aquí aparece el resultado -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Desarrollado por Hordark</p>
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
