@@ -276,6 +276,387 @@ const pdfList = [
     if (total >= 146)                return "-30 PV Crit E";
     return "Sin efecto (rango no definido)";
   }
+
+  function outcomeContundenteCoraza(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 35)  return "0 PV";
+    if (total >= 36 && total <= 40) return "-1 PV";
+    if (total >= 41 && total <= 45) return "-1 PV";
+    if (total >= 46 && total <= 50) return "-2 PV";
+    if (total >= 51 && total <= 55) return "-3 PV";
+    if (total >= 56 && total <= 60) return "-3 PV";
+    if (total >= 61 && total <= 65) return "-4 PV";
+    if (total >= 66 && total <= 70) return "-5 PV";
+    if (total >= 71 && total <= 75) return "-5 PV";
+    if (total >= 76 && total <= 80) return "-6 PV";
+    if (total >= 81 && total <= 85) return "-7 PV";
+    if (total >= 86 && total <= 90) return "-8 PV";
+    if (total >= 91 && total <= 95) return "-8 PV";
+    if (total >= 96 && total <= 100) return "-9 PV";
+    if (total >= 101 && total <= 105) return "-10 PV";
+    if (total >= 106 && total <= 110) return "-10 PV Crit A";
+    if (total >= 111 && total <= 115) return "-11 PV Crit A";
+    if (total >= 116 && total <= 120) return "-12 PV Crit B";
+    if (total >= 121 && total <= 125) return "-13 PV Crit B";
+    if (total >= 126 && total <= 130) return "-13 PV Crit C";
+    if (total >= 131 && total <= 135) return "-14 PV Crit C";
+    if (total >= 136 && total <= 140) return "-15 PV Crit D";
+    if (total >= 141 && total <= 145) return "-16 PV Crit D";
+    if (total >= 146)                return "-16 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+  
+  function outcomeContundenteCotaDeMalla(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 35)  return "0 PV";
+    if (total >= 36 && total <= 40) return "0 PV";
+    if (total >= 41 && total <= 45) return "-1 PV";
+    if (total >= 46 && total <= 50) return "-2 PV";
+    if (total >= 51 && total <= 55) return "-3 PV";
+    if (total >= 56 && total <= 60) return "-4 PV";
+    if (total >= 61 && total <= 65) return "-5 PV";
+    if (total >= 66 && total <= 70) return "-6 PV";
+    if (total >= 71 && total <= 75) return "-7 PV";
+    if (total >= 76 && total <= 80) return "-8 PV";
+    if (total >= 81 && total <= 85) return "-9 PV";
+    if (total >= 86 && total <= 90) return "-10 PV";
+    if (total >= 91 && total <= 95) return "-11 PV";
+    if (total >= 96 && total <= 100) return "-12 PV Crit A";
+    if (total >= 101 && total <= 105) return "-13 PV Crit A";
+    if (total >= 106 && total <= 110) return "-14 PV Crit B";
+    if (total >= 111 && total <= 115) return "-15 PV Crit B";
+    if (total >= 116 && total <= 120) return "-16 PV Crit C";
+    if (total >= 121 && total <= 125) return "-17 PV Crit C";
+    if (total >= 126 && total <= 130) return "-18 PV Crit C";
+    if (total >= 131 && total <= 135) return "-19 PV Crit D";
+    if (total >= 136 && total <= 140) return "-20 PV Crit D";
+    if (total >= 141 && total <= 145) return "-21 PV Crit E";
+    if (total >= 146)                return "-22 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeContundenteCueroEndurecido(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 35)  return "0 PV";
+    if (total >= 36 && total <= 40) return "0 PV";
+    if (total >= 41 && total <= 45) return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "0 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-6 PV";
+    if (total >= 86 && total <= 90) return "-7 PV Crit A";
+    if (total >= 91 && total <= 95) return "-8 PV Crit A";
+    if (total >= 96 && total <= 100) return "-9 PV Crit B";
+    if (total >= 101 && total <= 105) return "-10 PV Crit B";
+    if (total >= 106 && total <= 110) return "-11 PV Crit B";
+    if (total >= 111 && total <= 115) return "-12 PV Crit C";
+    if (total >= 116 && total <= 120) return "-13 PV Crit C";
+    if (total >= 121 && total <= 125) return "-15 PV Crit C";
+    if (total >= 126 && total <= 130) return "-16 PV Crit C";
+    if (total >= 131 && total <= 135) return "-17 PV Crit D";
+    if (total >= 136 && total <= 140) return "-18 PV Crit D";
+    if (total >= 141 && total <= 145) return "-19 PV Crit E";
+    if (total >= 146)                return "-20 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+    function outcomeContundenteCuero(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 35)  return "0 PV";
+    if (total >= 36 && total <= 40) return "0 PV";
+    if (total >= 41 && total <= 45) return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "0 PV";
+    if (total >= 66 && total <= 70) return "-3 PV";
+    if (total >= 71 && total <= 75) return "-5 PV";
+    if (total >= 76 && total <= 80) return "-6 PV";
+    if (total >= 81 && total <= 85) return "-7 PV Crit A";
+    if (total >= 86 && total <= 90) return "-8 PV Crit A";
+    if (total >= 91 && total <= 95) return "-9 PV Crit A";
+    if (total >= 96 && total <= 100) return "-10 PV Crit B";
+    if (total >= 101 && total <= 105) return "-11 PV Crit B";
+    if (total >= 106 && total <= 110) return "-12 PV Crit B";
+    if (total >= 111 && total <= 115) return "-13 PV Crit C";
+    if (total >= 116 && total <= 120) return "-14 PV Crit C";
+    if (total >= 121 && total <= 125) return "-15 PV Crit C";
+    if (total >= 126 && total <= 130) return "-16 PV Crit D";
+    if (total >= 131 && total <= 135) return "-17 PV Crit D";
+    if (total >= 136 && total <= 140) return "-18 PV Crit E";
+    if (total >= 141 && total <= 145) return "-19 PV Crit E";
+    if (total >= 146)                return "-20 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+      function outcomeContundenteSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 35)  return "0 PV";
+    if (total >= 36 && total <= 40) return "0 PV";
+    if (total >= 41 && total <= 45) return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "0 PV";
+    if (total >= 66 && total <= 70) return "0 PV";
+    if (total >= 71 && total <= 75) return "0 PV";
+    if (total >= 76 && total <= 80) return "0 PV";
+    if (total >= 81 && total <= 85) return "-6 PV";
+    if (total >= 86 && total <= 90) return "-8 PV";
+    if (total >= 91 && total <= 95) return "-9 PV Crit A";
+    if (total >= 96 && total <= 100) return "-10 PV Crit B";
+    if (total >= 101 && total <= 105) return "-12 PV Crit C";
+    if (total >= 106 && total <= 110) return "-13 PV Crit C";
+    if (total >= 111 && total <= 115) return "-14 PV Crit D";
+    if (total >= 116 && total <= 120) return "-15 PV Crit D";
+    if (total >= 121 && total <= 125) return "-17 PV Crit D";
+    if (total >= 126 && total <= 130) return "-18 PV Crit E";
+    if (total >= 131 && total <= 135) return "-19 PV Crit E";
+    if (total >= 136 && total <= 140) return "-21 PV Crit E";
+    if (total >= 141 && total <= 145) return "-22 PV Crit E";
+    if (total >= 146)                return "-23 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeA2ManosCoraza(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 55)  return "0 PV";
+    if (total >= 56 && total <= 60) return "-2 PV";
+    if (total >= 61 && total <= 65) return "-3 PV";
+    if (total >= 66 && total <= 70) return "-4 PV";
+    if (total >= 71 && total <= 75) return "-5 PV";
+    if (total >= 76 && total <= 80) return "-6 PV";
+    if (total >= 81 && total <= 85) return "-7 PV";
+    if (total >= 86 && total <= 90) return "-8 PV";
+    if (total >= 91 && total <= 95) return "-9 PV";
+    if (total >= 96 && total <= 100) return "-11 PV";
+    if (total >= 101 && total <= 105) return "-12 PV Crit A";
+    if (total >= 106 && total <= 110) return "-13 PV Crit A";
+    if (total >= 111 && total <= 115) return "-14 PV Crit B";
+    if (total >= 116 && total <= 120) return "-15 PV Crit B";
+    if (total >= 121 && total <= 125) return "-16 PV Crit C";
+    if (total >= 126 && total <= 130) return "-17 PV Crit C";
+    if (total >= 131 && total <= 135) return "-19 PV Crit D";
+    if (total >= 136 && total <= 140) return "-20 PV Crit D";
+    if (total >= 141 && total <= 145) return "-21 PV Crit E";
+    if (total >= 146)                return "-22 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+  
+  function outcomeA2ManosCotaDeMalla(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 55)  return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "0 PV";
+    if (total >= 66 && total <= 70) return "-3 PV";
+    if (total >= 71 && total <= 75) return "-5 PV";
+    if (total >= 76 && total <= 80) return "-7 PV";
+    if (total >= 81 && total <= 85) return "-9 PV";
+    if (total >= 86 && total <= 90) return "-11 PV";
+    if (total >= 91 && total <= 95) return "-12 PV Crit A";
+    if (total >= 96 && total <= 100) return "-14 PV Crit A";
+    if (total >= 101 && total <= 105) return "-16 PV Crit B";
+    if (total >= 106 && total <= 110) return "-18 PV Crit B";
+    if (total >= 111 && total <= 115) return "-20 PV Crit C";
+    if (total >= 116 && total <= 120) return "-22 PV Crit C";
+    if (total >= 121 && total <= 125) return "-24 PV Crit C";
+    if (total >= 126 && total <= 130) return "-26 PV Crit D";
+    if (total >= 131 && total <= 135) return "-28 PV Crit D";
+    if (total >= 136 && total <= 140) return "-29 PV Crit E";
+    if (total >= 141 && total <= 145) return "-31 PV Crit E";
+    if (total >= 146)                return "-33 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeA2ManosCueroEndurecido(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 55)  return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "0 PV";
+    if (total >= 66 && total <= 70) return "0 PV";
+    if (total >= 71 && total <= 75) return "-2 PV";
+    if (total >= 76 && total <= 80) return "-4 PV Crit A";
+    if (total >= 81 && total <= 85) return "-7 PV Crit A";
+    if (total >= 86 && total <= 90) return "-9 PV Crit B";
+    if (total >= 91 && total <= 95) return "-12 PV Crit B";
+    if (total >= 96 && total <= 100) return "-14 PV Crit C";
+    if (total >= 101 && total <= 105) return "-17 PV Crit C";
+    if (total >= 106 && total <= 110) return "-20 PV Crit C";
+    if (total >= 111 && total <= 115) return "-22 PV Crit C";
+    if (total >= 116 && total <= 120) return "-24 PV Crit C";
+    if (total >= 121 && total <= 125) return "-27 PV Crit D";
+    if (total >= 126 && total <= 130) return "-29 PV Crit D";
+    if (total >= 131 && total <= 135) return "-32 PV Crit E";
+    if (total >= 136 && total <= 140) return "-34 PV Crit E";
+    if (total >= 141 && total <= 145) return "-37 PV Crit E";
+    if (total >= 146)                return "-40 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+    function outcomeA2ManosCuero(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 55)  return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "0 PV";
+    if (total >= 66 && total <= 70) return "-6 PV";
+    if (total >= 71 && total <= 75) return "-8 PV Crit A";
+    if (total >= 76 && total <= 80) return "-10 PV Crit A";
+    if (total >= 81 && total <= 85) return "-13 PV Crit B";
+    if (total >= 86 && total <= 90) return "-15 PV Crit B";
+    if (total >= 91 && total <= 95) return "-17 PV Crit C";
+    if (total >= 96 && total <= 100) return "-20 PV Crit C";
+    if (total >= 101 && total <= 105) return "-22 PV Crit C";
+    if (total >= 106 && total <= 110) return "-24 PV Crit C";
+    if (total >= 111 && total <= 115) return "-27 PV Crit D";
+    if (total >= 116 && total <= 120) return "-29 PV Crit D";
+    if (total >= 121 && total <= 125) return "-31 PV Crit D";
+    if (total >= 126 && total <= 130) return "-33 PV Crit E";
+    if (total >= 131 && total <= 135) return "-36 PV Crit E";
+    if (total >= 136 && total <= 140) return "-38 PV Crit E";
+    if (total >= 141 && total <= 145) return "-40 PV Crit E";
+    if (total >= 146)                return "-43 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+      function outcomeA2ManosSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 55)  return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "0 PV";
+    if (total >= 66 && total <= 70) return "0 PV";
+    if (total >= 71 && total <= 75) return "0 PV";
+    if (total >= 76 && total <= 80) return "0 PV";
+    if (total >= 81 && total <= 85) return "-10 PV Crit A";
+    if (total >= 86 && total <= 90) return "-13 PV Crit B";
+    if (total >= 91 && total <= 95) return "-16 PV Crit C";
+    if (total >= 96 && total <= 100) return "-19 PV Crit D";
+    if (total >= 101 && total <= 105) return "-22 PV Crit D";
+    if (total >= 106 && total <= 110) return "-25 PV Crit D";
+    if (total >= 111 && total <= 115) return "-28 PV Crit E";
+    if (total >= 116 && total <= 120) return "-31 PV Crit E";
+    if (total >= 121 && total <= 125) return "-33 PV Crit E";
+    if (total >= 126 && total <= 130) return "-36 PV Crit E";
+    if (total >= 131 && total <= 135) return "-39 PV Crit E";
+    if (total >= 136 && total <= 140) return "-42 PV Crit E";
+    if (total >= 141 && total <= 145) return "-45 PV Crit E";
+    if (total >= 146)                return "-48 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+    function outcomeProyectilesCoraza(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 70)  return "0 PV";
+    if (total >= 71 && total <= 75) return "-1 PV";
+    if (total >= 76 && total <= 80) return "-2 PV";
+    if (total >= 81 && total <= 85) return "-3 PV";
+    if (total >= 86 && total <= 90) return "-4 PV";
+    if (total >= 91 && total <= 95) return "-5 PV";
+    if (total >= 96 && total <= 100) return "-6 PV";
+    if (total >= 101 && total <= 105) return "-7 PV";
+    if (total >= 106 && total <= 110) return "-8 PV Crit A";
+    if (total >= 111 && total <= 115) return "-9 PV Crit A";
+    if (total >= 116 && total <= 120) return "-10 PV Crit A";
+    if (total >= 121 && total <= 125) return "-11 PV Crit B";
+    if (total >= 126 && total <= 130) return "-11 PV Crit B";
+    if (total >= 131 && total <= 135) return "-12 PV Crit C";
+    if (total >= 136 && total <= 140) return "-13 PV Crit C";
+    if (total >= 141 && total <= 145) return "-14 PV Crit D";
+    if (total >= 146)                return "-14 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+  
+  function outcomeProyectilesCotaDeMalla(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 70)  return "0 PV";
+    if (total >= 71 && total <= 75) return "0 PV";
+    if (total >= 76 && total <= 80) return "-2 PV";
+    if (total >= 81 && total <= 85) return "-4 PV";
+    if (total >= 86 && total <= 90) return "-6 PV";
+    if (total >= 91 && total <= 95) return "-7 PV";
+    if (total >= 96 && total <= 100) return "-8 PV Crit A";
+    if (total >= 101 && total <= 105) return "-10 PV Crit A";
+    if (total >= 106 && total <= 110) return "-13 PV Crit B";
+    if (total >= 111 && total <= 115) return "-14 PV Crit B";
+    if (total >= 116 && total <= 120) return "-16 PV Crit B";
+    if (total >= 121 && total <= 125) return "-17 PV Crit C";
+    if (total >= 126 && total <= 130) return "-19 PV Crit C";
+    if (total >= 131 && total <= 135) return "-20 PV Crit D";
+    if (total >= 136 && total <= 140) return "-22 PV Crit D";
+    if (total >= 141 && total <= 145) return "-23 PV Crit E";
+    if (total >= 146)                return "-25 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeProyectilesCueroEndurecido(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 70)  return "0 PV";
+    if (total >= 71 && total <= 75) return "0 PV";
+    if (total >= 76 && total <= 80) return "0 PV";
+    if (total >= 81 && total <= 85) return "-3 PV";
+    if (total >= 86 && total <= 90) return "-5 PV";
+    if (total >= 91 && total <= 95) return "-7 PV Crit A";
+    if (total >= 96 && total <= 100) return "-9 PV Crit A";
+    if (total >= 101 && total <= 105) return "-10 PV Crit B";
+    if (total >= 106 && total <= 110) return "-12 PV Crit B";
+    if (total >= 111 && total <= 115) return "-13 PV Crit B";
+    if (total >= 116 && total <= 120) return "-15 PV Crit C";
+    if (total >= 121 && total <= 125) return "-17 PV Crit C";
+    if (total >= 126 && total <= 130) return "-19 PV Crit D";
+    if (total >= 131 && total <= 135) return "-21 PV Crit D";
+    if (total >= 136 && total <= 140) return "-23 PV Crit D";
+    if (total >= 141 && total <= 145) return "-25 PV Crit E";
+    if (total >= 146)                return "-26 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+    function outcomeProyectilesCuero(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 70)  return "0 PV";
+    if (total >= 71 && total <= 75) return "0 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-6 PV";
+    if (total >= 86 && total <= 90) return "-8 PV Crit A";
+    if (total >= 91 && total <= 95) return "-10 PV Crit A";
+    if (total >= 96 && total <= 100) return "-12 PV Crit B";
+    if (total >= 101 && total <= 105) return "-13 PV Crit B";
+    if (total >= 106 && total <= 110) return "-14 PV Crit B";
+    if (total >= 111 && total <= 115) return "-16 PV Crit C";
+    if (total >= 116 && total <= 120) return "-17 PV Crit C";
+    if (total >= 121 && total <= 125) return "-19 PV Crit D";
+    if (total >= 126 && total <= 130) return "-20 PV Crit D";
+    if (total >= 131 && total <= 135) return "-22 PV Crit D";
+    if (total >= 136 && total <= 140) return "-23 PV Crit E";
+    if (total >= 141 && total <= 145) return "-25 PV Crit E";
+    if (total >= 146)                return "-26 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+      function outcomeProyectilesSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 9 && total <= 70)  return "0 PV";
+    if (total >= 71 && total <= 75) return "0 PV";
+    if (total >= 76 && total <= 80) return "0 PV";
+    if (total >= 81 && total <= 85) return "0 PV";
+    if (total >= 86 && total <= 90) return "0 PV";
+    if (total >= 91 && total <= 95) return "-8 PV Crit A";
+    if (total >= 96 && total <= 100) return "-10 PV Crit B";
+    if (total >= 101 && total <= 105) return "-11 PV Crit C";
+    if (total >= 106 && total <= 110) return "-13 PV Crit C";
+    if (total >= 111 && total <= 115) return "-15 PV Crit C";
+    if (total >= 116 && total <= 120) return "-16 PV Crit D";
+    if (total >= 121 && total <= 125) return "-18 PV Crit D";
+    if (total >= 126 && total <= 130) return "-20 PV Crit D";
+    if (total >= 131 && total <= 135) return "-22 PV Crit E";
+    if (total >= 136 && total <= 140) return "-23 PV Crit E";
+    if (total >= 141 && total <= 145) return "-25 PV Crit E";
+    if (total >= 146)                return "-27 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
   // ===== Mapa arma → armadura → función =====
   const outcomesByWeapon = {
     FILO: {

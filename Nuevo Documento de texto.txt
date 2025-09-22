@@ -1,0 +1,63 @@
+Ahora quiero implementar una segunda página, para lo que necesito:
+1. Crear una barra de botones en la página index.html en la parte superior, de momento solo pondremos un botón que se llamará Combate. 
+2. Al clicar en el botón combate nos llevará a esta segunda página, que tendrá el mismo aspecto de tamaño y fondo que index.html. 
+3. En combate.html quiero una barra de botones igual que en index, pero en esta habrá un botón Inicio que nos llevará a index.html.
+4. Debajo de la barra de botones habrá un desplegable con un texto encima que diga Elige tipo de arma, de momento en este solo tendrá dos opciones: Filo y Contundente.
+5. Debajo de la elección de arma habrá tres espacios donde el usuario podrá escribir cifras numéricas y un desplegable en el que podrá seleccionar entre las opciones: Coraza, Cota de malla, Cuero endurecido, Cuero y Sin armadura. Estos cuatro estarán en línea y espaciados, los espacios con espacio para cuatro dígitos, encima del primero pondrá BO, encima del segundo BD y encima del tercero Tirada y encima del desplegable Armadura.
+6. Debajo de estos cuatro habrá un botón que pondrá calcular, al clicarlo revisará por partes que se ha seleccionado arma en el desplegable y que cada uno de los tres espacios contiene un número, en caso de que no se haya seleccionado arma saldrá un aviso "no se seleccionó arma" y si hay algún espacio en blanco o con valores no numéricos saldrá un mensaje que diga "Revisa los datos introducidos, algo no cuadra." y si no ha seleccionado armadura aparecerá "Selecciona armadura.".
+7. Vamos a hacer de momento solo la prueba de lo que pasaría si se selecciona arma Filo y se introducen tres valores numéricos, en este caso a Tirada se le suma BO y se le resta BD y dependiendo del resultado, en una celda debajo del botón Calcular aparecería un resultado según uno de los siguiente valores dependiendo de una combinación de ese resultado y la armadura seleccionada:
+	si la Armadura es Coraza y el resultado va de 1 a 8 mostraría: Pifia
+	si la Armadura es Coraza y el resultado va de 9 a 45 mostraría: 0 PV
+	si la Armadura es Coraza y el resultado va de 46 a 50 mostraría: -1 PV
+	si la Armadura es Coraza y el resultado va de 51 a 55 mostraría: -1 PV
+	si la Armadura es Coraza y el resultado va de 56 a 60 mostraría: -2 PV
+	si la Armadura es Coraza y el resultado va de 61 a 65 mostraría: -2 PV
+	si la Armadura es Coraza y el resultado va de 66 a 70 mostraría: -3 PV
+	si la Armadura es Coraza y el resultado va de 71 a 75 mostraría: -3 PV
+	si la Armadura es Coraza y el resultado va de 76 a 80 mostraría: -4 PV
+	si la Armadura es Coraza y el resultado va de 81 a 85 mostraría: -5 PV
+	si la Armadura es Coraza y el resultado va de 86 a 90 mostraría: -5 PV
+	si la Armadura es Coraza y el resultado va de 91 a 95 mostraría: -6 PV
+	si la Armadura es Coraza y el resultado va de 96 a 100 mostraría: -6 PV
+	si la Armadura es Coraza y el resultado va de 101 a 105 mostraría: -7 PV
+	si la Armadura es Coraza y el resultado va de 106 a 110 mostraría: -8 PV
+	si la Armadura es Coraza y el resultado va de 111 a 115 mostraría: -8 PV Crit A
+	si la Armadura es Coraza y el resultado va de 116 a 120 mostraría: -9 PV Crit A
+	si la Armadura es Coraza y el resultado va de 121 a 125 mostraría: -9 PV Crit A
+	si la Armadura es Coraza y el resultado va de 126 a 130 mostraría: -10 PV Crit B
+	si la Armadura es Coraza y el resultado va de 131 a 135 mostraría: -10 PV Crit B
+	si la Armadura es Coraza y el resultado va de 136 a 140 mostraría: -11 PV Crit C
+	si la Armadura es Coraza y el resultado va de 141 a 145 mostraría: -12 PV Crit D
+	si la Armadura es Coraza y el resultado va de 146 o más mostraría: -12 PV Crit E
+
+Empecemos con esto y ya iré añadiendo el resto de combinaciones
+
+Dame el código del nuevo HTML index y combate por pantalla y el nuevo app.js, si quieres hazlo por paradas
+
+Te paso el resultado para Filo-Cota de maya, dime solamente lo que tengo que añadir, en que archivo y la línea anterior y posterior para saber donde implementarlo:
+
+	si el resultado va de 1 a 8 mostraría: Pifia
+	si el resultado va de 9 a 45 mostraría: 0 PV
+	si el resultado va de 46 a 50 mostraría: 0 PV
+	si el resultado va de 51 a 55 mostraría: -1 PV
+	si el resultado va de 56 a 60 mostraría: -1 PV
+	si el resultado va de 61 a 65 mostraría: -2 PV
+	si el resultado va de 66 a 70 mostraría: -3 PV
+	si el resultado va de 71 a 75 mostraría: -4 PV
+	si el resultado va de 76 a 80 mostraría: -5 PV
+	si el resultado va de 81 a 85 mostraría: -6 PV
+	si el resultado va de 86 a 90 mostraría: -7 PV
+	si el resultado va de 91 a 95 mostraría: -8 PV
+	si el resultado va de 96 a 100 mostraría: -9 PV
+	si el resultado va de 101 a 105 mostraría: -10 PV Crit A
+	si el resultado va de 106 a 110 mostraría: -11 PV Crit A
+	si el resultado va de 111 a 115 mostraría: -12 PV Crit B
+	si el resultado va de 116 a 120 mostraría: -13 PV Crit B
+	si el resultado va de 121 a 125 mostraría: -13 PV Crit C
+	si el resultado va de 126 a 130 mostraría: -14 PV Crit C
+	si el resultado va de 131 a 135 mostraría: -15 PV Crit C
+	si el resultado va de 136 a 140 mostraría: -16 PV Crit D
+	si el resultado va de 141 a 145 mostraría: -17 PV Crit D
+	si el resultado va de 146 o más mostraría: -18 PV Crit E
+	
+
