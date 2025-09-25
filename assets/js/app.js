@@ -25,7 +25,7 @@ const pdfList = [
   { label: "CT-5, 10 y 11 Críticos de presa y grandes criaturas", file: "CT-5, 10 y 11 Criticos de presa y grandes criaturas.pdf" },
   { label: "CT-6 a 9 Críticos de calor, frío, electricidad e impacto", file: "CT-6 a 9 Criticos de calor, frio, electricidad e impacto.pdf" },
   { label: "ET-1 a 5 Puntos de experiencia", file: "ET-1 a 5 Puntos de experiencia.pdf" },
-  { label: "FT-1 a 4 Pifias", file: "FT-1 a 4 Pifias.pdf" },
+  { label: "FT-1 a 4 Ataque fallidos", file: "FT-1 a 4 Ataque fallidos.pdf" },
   { label: "IHT-1 a 3 Deterioro, recuperación y efecto de resucitar", file: "IHT-1 a 3 Deterioro, recuperacion y efecto de resucitar.pdf" },
   { label: "MT-1 Maniobras y movimiento", file: "MT-1 Maniobras y movimiento.pdf" },
   { label: "MT-2 Maniobras estáticas", file: "MT-2 Maniobras estaticas.pdf" },
@@ -147,7 +147,7 @@ const pdfList = [
   };
 
   function outcomeFiloCoraza(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 45)  return "0 PV";
     if (total >= 46 && total <= 50) return "-1 PV";
     if (total >= 51 && total <= 55) return "-1 PV";
@@ -174,7 +174,7 @@ const pdfList = [
   }
   
   function outcomeFiloCotaDeMalla(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 50)  return "0 PV";
     if (total >= 51 && total <= 55) return "-1 PV";
     if (total >= 56 && total <= 60) return "-1 PV";
@@ -200,7 +200,7 @@ const pdfList = [
   }
 
   function outcomeFiloCueroEndurecido(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 50)  return "0 PV";
     if (total >= 51 && total <= 55) return "0 PV";
     if (total >= 56 && total <= 60) return "0 PV";
@@ -225,8 +225,8 @@ const pdfList = [
     return "Sin efecto (rango no definido)";
   }
 
-    function outcomeFiloCuero(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+  function outcomeFiloCuero(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 50)  return "0 PV";
     if (total >= 51 && total <= 55) return "0 PV";
     if (total >= 56 && total <= 60) return "0 PV";
@@ -251,8 +251,8 @@ const pdfList = [
     return "Sin efecto (rango no definido)";
   }
 
-      function outcomeFiloSinArmadura(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+  function outcomeFiloSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 50)  return "0 PV";
     if (total >= 51 && total <= 55) return "0 PV";
     if (total >= 56 && total <= 60) return "0 PV";
@@ -278,7 +278,7 @@ const pdfList = [
   }
 
   function outcomeContundenteCoraza(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 35)  return "0 PV";
     if (total >= 36 && total <= 40) return "-1 PV";
     if (total >= 41 && total <= 45) return "-1 PV";
@@ -307,7 +307,7 @@ const pdfList = [
   }
   
   function outcomeContundenteCotaDeMalla(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 35)  return "0 PV";
     if (total >= 36 && total <= 40) return "0 PV";
     if (total >= 41 && total <= 45) return "-1 PV";
@@ -336,7 +336,7 @@ const pdfList = [
   }
 
   function outcomeContundenteCueroEndurecido(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 35)  return "0 PV";
     if (total >= 36 && total <= 40) return "0 PV";
     if (total >= 41 && total <= 45) return "0 PV";
@@ -364,8 +364,8 @@ const pdfList = [
     return "Sin efecto (rango no definido)";
   }
 
-    function outcomeContundenteCuero(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+  function outcomeContundenteCuero(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 35)  return "0 PV";
     if (total >= 36 && total <= 40) return "0 PV";
     if (total >= 41 && total <= 45) return "0 PV";
@@ -377,24 +377,24 @@ const pdfList = [
     if (total >= 71 && total <= 75) return "-5 PV";
     if (total >= 76 && total <= 80) return "-6 PV";
     if (total >= 81 && total <= 85) return "-7 PV Crit A";
-    if (total >= 86 && total <= 90) return "-8 PV Crit A";
-    if (total >= 91 && total <= 95) return "-9 PV Crit A";
-    if (total >= 96 && total <= 100) return "-10 PV Crit B";
-    if (total >= 101 && total <= 105) return "-11 PV Crit B";
-    if (total >= 106 && total <= 110) return "-12 PV Crit B";
-    if (total >= 111 && total <= 115) return "-13 PV Crit C";
-    if (total >= 116 && total <= 120) return "-14 PV Crit C";
-    if (total >= 121 && total <= 125) return "-15 PV Crit C";
-    if (total >= 126 && total <= 130) return "-16 PV Crit D";
-    if (total >= 131 && total <= 135) return "-17 PV Crit D";
-    if (total >= 136 && total <= 140) return "-18 PV Crit E";
-    if (total >= 141 && total <= 145) return "-19 PV Crit E";
-    if (total >= 146)                return "-20 PV Crit E";
+    if (total >= 86 && total <= 90) return "-9 PV Crit A";
+    if (total >= 91 && total <= 95) return "-10 PV Crit B";
+    if (total >= 96 && total <= 100) return "-12 PV Crit B";
+    if (total >= 101 && total <= 105) return "-13 PV Crit B";
+    if (total >= 106 && total <= 110) return "-14 PV Crit C";
+    if (total >= 111 && total <= 115) return "-15 PV Crit C";
+    if (total >= 116 && total <= 120) return "-17 PV Crit C";
+    if (total >= 121 && total <= 125) return "-18 PV Crit D";
+    if (total >= 126 && total <= 130) return "-19 PV Crit D";
+    if (total >= 131 && total <= 135) return "-20 PV Crit D";
+    if (total >= 136 && total <= 140) return "-22 PV Crit D";
+    if (total >= 141 && total <= 145) return "-23 PV Crit E";
+    if (total >= 146)                return "-24 PV Crit E";
     return "Sin efecto (rango no definido)";
   }
 
-      function outcomeContundenteSinArmadura(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+  function outcomeContundenteSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 35)  return "0 PV";
     if (total >= 36 && total <= 40) return "0 PV";
     if (total >= 41 && total <= 45) return "0 PV";
@@ -423,7 +423,7 @@ const pdfList = [
   }
 
   function outcomeA2ManosCoraza(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 55)  return "0 PV";
     if (total >= 56 && total <= 60) return "-2 PV";
     if (total >= 61 && total <= 65) return "-3 PV";
@@ -448,7 +448,7 @@ const pdfList = [
   }
   
   function outcomeA2ManosCotaDeMalla(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 55)  return "0 PV";
     if (total >= 56 && total <= 60) return "0 PV";
     if (total >= 61 && total <= 65) return "0 PV";
@@ -473,7 +473,7 @@ const pdfList = [
   }
 
   function outcomeA2ManosCueroEndurecido(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 55)  return "0 PV";
     if (total >= 56 && total <= 60) return "0 PV";
     if (total >= 61 && total <= 65) return "0 PV";
@@ -497,8 +497,8 @@ const pdfList = [
     return "Sin efecto (rango no definido)";
   }
 
-    function outcomeA2ManosCuero(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+  function outcomeA2ManosCuero(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 55)  return "0 PV";
     if (total >= 56 && total <= 60) return "0 PV";
     if (total >= 61 && total <= 65) return "0 PV";
@@ -522,8 +522,8 @@ const pdfList = [
     return "Sin efecto (rango no definido)";
   }
 
-      function outcomeA2ManosSinArmadura(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+  function outcomeA2ManosSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 55)  return "0 PV";
     if (total >= 56 && total <= 60) return "0 PV";
     if (total >= 61 && total <= 65) return "0 PV";
@@ -547,8 +547,8 @@ const pdfList = [
     return "Sin efecto (rango no definido)";
   }
 
-    function outcomeProyectilesCoraza(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+  function outcomeProyectilesCoraza(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 70)  return "0 PV";
     if (total >= 71 && total <= 75) return "-1 PV";
     if (total >= 76 && total <= 80) return "-2 PV";
@@ -570,7 +570,7 @@ const pdfList = [
   }
   
   function outcomeProyectilesCotaDeMalla(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 70)  return "0 PV";
     if (total >= 71 && total <= 75) return "0 PV";
     if (total >= 76 && total <= 80) return "-2 PV";
@@ -592,7 +592,7 @@ const pdfList = [
   }
 
   function outcomeProyectilesCueroEndurecido(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 70)  return "0 PV";
     if (total >= 71 && total <= 75) return "0 PV";
     if (total >= 76 && total <= 80) return "0 PV";
@@ -613,8 +613,8 @@ const pdfList = [
     return "Sin efecto (rango no definido)";
   }
 
-    function outcomeProyectilesCuero(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+  function outcomeProyectilesCuero(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 70)  return "0 PV";
     if (total >= 71 && total <= 75) return "0 PV";
     if (total >= 76 && total <= 80) return "-4 PV";
@@ -635,8 +635,8 @@ const pdfList = [
     return "Sin efecto (rango no definido)";
   }
 
-      function outcomeProyectilesSinArmadura(total) {
-    if (total >= 1 && total <= 8)   return "Pifia";
+  function outcomeProyectilesSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
     if (total >= 9 && total <= 70)  return "0 PV";
     if (total >= 71 && total <= 75) return "0 PV";
     if (total >= 76 && total <= 80) return "0 PV";
@@ -654,6 +654,526 @@ const pdfList = [
     if (total >= 136 && total <= 140) return "-23 PV Crit E";
     if (total >= 141 && total <= 145) return "-25 PV Crit E";
     if (total >= 146)                return "-27 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesEnormeCoraza(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-5 PV";
+    if (total >= 86 && total <= 90) return "-6 PV";
+    if (total >= 91 && total <= 95) return "-6 PV Crit T";
+    if (total >= 96 && total <= 100) return "-7 PV Crit T";
+    if (total >= 101 && total <= 105) return "-7 PV Crit A";
+    if (total >= 106 && total <= 110) return "-8 PV Crit A";
+    if (total >= 111 && total <= 115) return "-9 PV Crit A";
+    if (total >= 116 && total <= 120) return "-10 PV Crit B";
+    if (total >= 121 && total <= 125) return "-14 PV Crit B";
+    if (total >= 126 && total <= 130) return "-16 PV Crit B";
+    if (total >= 131 && total <= 135) return "-18 PV Crit C";
+    if (total >= 136 && total <= 140) return "-20 PV Crit C";
+    if (total >= 141 && total <= 145) return "-22 PV Crit D";
+    if (total >= 146)                return "-24 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesGrandeCoraza(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-5 PV";
+    if (total >= 86 && total <= 90) return "-6 PV";
+    if (total >= 91 && total <= 95) return "-6 PV Crit T";
+    if (total >= 96 && total <= 100) return "-7 PV Crit T";
+    if (total >= 101 && total <= 105) return "-7 PV Crit A";
+    if (total >= 106 && total <= 110) return "-8 PV Crit A";
+    if (total >= 111 && total <= 115) return "-9 PV Crit A";
+    if (total >= 116 && total <= 120) return "-10 PV Crit B";
+    if (total >= 121 && total <= 125) return "-14 PV Crit B";
+    if (total >= 126 && total <= 130) return "-16 PV Crit B";
+    if (total >= 131)                return "-18 PV Crit C";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesMedianoCoraza(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-5 PV";
+    if (total >= 86 && total <= 90) return "-6 PV";
+    if (total >= 91 && total <= 95) return "-6 PV Crit T";
+    if (total >= 96 && total <= 100) return "-7 PV Crit T";
+    if (total >= 101 && total <= 105) return "-7 PV Crit A";
+    if (total >= 106 && total <= 110) return "-8 PV Crit A";
+    if (total >= 111 && total <= 115) return "-9 PV Crit A";
+    if (total >= 116)                return "-10 PV Crit B";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesPequenoCoraza(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-5 PV";
+    if (total >= 86 && total <= 90) return "-6 PV";
+    if (total >= 91 && total <= 95) return "-6 PV Crit T";
+    if (total >= 96 && total <= 100) return "-7 PV Crit T";
+    if (total >= 101)                return "-7 PV Crit A";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesDiminutoCoraza(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81)                return "-5 PV";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesEnormeCotaDeMalla(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-5 PV";
+    if (total >= 86 && total <= 90) return "-6 PV Crit T";
+    if (total >= 91 && total <= 95) return "-7 PV Crit T";
+    if (total >= 96 && total <= 100) return "-8 PV Crit A";
+    if (total >= 101 && total <= 105) return "-9 PV Crit A";
+    if (total >= 106 && total <= 110) return "-10 PV Crit A";
+    if (total >= 111 && total <= 115) return "-11 PV Crit B";
+    if (total >= 116 && total <= 120) return "-11 PV Crit B";
+    if (total >= 121 && total <= 125) return "-15 PV Crit B";
+    if (total >= 126 && total <= 130) return "-18 PV Crit C";
+    if (total >= 131 && total <= 135) return "-20 PV Crit C";
+    if (total >= 136 && total <= 140) return "-23 PV Crit D";
+    if (total >= 141 && total <= 145) return "-25 PV Crit D";
+    if (total >= 146)                return "-27 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesGrandeCotaDeMalla(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-5 PV";
+    if (total >= 86 && total <= 90) return "-6 PV Crit T";
+    if (total >= 91 && total <= 95) return "-7 PV Crit T";
+    if (total >= 96 && total <= 100) return "-8 PV Crit A";
+    if (total >= 101 && total <= 105) return "-9 PV Crit A";
+    if (total >= 106 && total <= 110) return "-10 PV Crit A";
+    if (total >= 111 && total <= 115) return "-11 PV Crit B";
+    if (total >= 116 && total <= 120) return "-11 PV Crit B";
+    if (total >= 121 && total <= 125) return "-15 PV Crit B";
+    if (total >= 126 && total <= 130) return "-18 PV Crit C";
+    if (total >= 131)                return "-20 PV Crit C";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesMedianoCotaDeMalla(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-5 PV";
+    if (total >= 86 && total <= 90) return "-6 PV Crit T";
+    if (total >= 91 && total <= 95) return "-7 PV Crit T";
+    if (total >= 96 && total <= 100) return "-8 PV Crit A";
+    if (total >= 101 && total <= 105) return "-9 PV Crit A";
+    if (total >= 106 && total <= 110) return "-10 PV Crit A";
+    if (total >= 111 && total <= 115) return "-11 PV Crit B";
+    if (total >= 116)                return "-11 PV Crit B";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesPequenoCotaDeMalla(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81 && total <= 85) return "-5 PV";
+    if (total >= 86 && total <= 90) return "-6 PV Crit T";
+    if (total >= 91 && total <= 95) return "-7 PV Crit T";
+    if (total >= 96 && total <= 100) return "-8 PV Crit A";
+    if (total >= 101)                return "-9 PV Crit A";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesDiminutoCotaDeMalla(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-4 PV";
+    if (total >= 81)                return "-5 PV";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesEnormeCueroEndurecido(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-5 PV";
+    if (total >= 81 && total <= 85) return "-7 PV Crit T";
+    if (total >= 86 && total <= 90) return "-8 PV Crit T";
+    if (total >= 91 && total <= 95) return "-9 PV Crit A";
+    if (total >= 96 && total <= 100) return "-10 PV Crit A";
+    if (total >= 101 && total <= 105) return "-11 PV Crit A";
+    if (total >= 106 && total <= 110) return "-12 PV Crit B";
+    if (total >= 111 && total <= 115) return "-13 PV Crit B";
+    if (total >= 116 && total <= 120) return "-14 PV Crit C";
+    if (total >= 121 && total <= 125) return "-18 PV Crit C";
+    if (total >= 126 && total <= 130) return "-20 PV Crit C";
+    if (total >= 131 && total <= 135) return "-22 PV Crit D";
+    if (total >= 136 && total <= 140) return "-26 PV Crit D";
+    if (total >= 141 && total <= 145) return "-29 PV Crit E";
+    if (total >= 146)                return "-32 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesGrandeCueroEndurecido(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-5 PV";
+    if (total >= 81 && total <= 85) return "-7 PV Crit T";
+    if (total >= 86 && total <= 90) return "-8 PV Crit T";
+    if (total >= 91 && total <= 95) return "-9 PV Crit A";
+    if (total >= 96 && total <= 100) return "-10 PV Crit A";
+    if (total >= 101 && total <= 105) return "-11 PV Crit A";
+    if (total >= 106 && total <= 110) return "-12 PV Crit B";
+    if (total >= 111 && total <= 115) return "-13 PV Crit B";
+    if (total >= 116 && total <= 120) return "-14 PV Crit C";
+    if (total >= 121 && total <= 125) return "-18 PV Crit C";
+    if (total >= 126 && total <= 130) return "-20 PV Crit C";
+    if (total >= 131)                return "-22 PV Crit D";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesMedianoCueroEndurecido(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-5 PV";
+    if (total >= 81 && total <= 85) return "-7 PV Crit T";
+    if (total >= 86 && total <= 90) return "-8 PV Crit T";
+    if (total >= 91 && total <= 95) return "-9 PV Crit A";
+    if (total >= 96 && total <= 100) return "-10 PV Crit A";
+    if (total >= 101 && total <= 105) return "-11 PV Crit A";
+    if (total >= 106 && total <= 110) return "-12 PV Crit B";
+    if (total >= 111 && total <= 115) return "-13 PV Crit B";
+    if (total >= 116)                return "-14 PV Crit C";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesPequenoCueroEndurecido(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-5 PV";
+    if (total >= 81 && total <= 85) return "-7 PV Crit T";
+    if (total >= 86 && total <= 90) return "-8 PV Crit T";
+    if (total >= 91 && total <= 95) return "-9 PV Crit A";
+    if (total >= 96 && total <= 100) return "-10 PV Crit A";
+    if (total >= 101)                return "-11 PV Crit A";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesDiminutoCueroEndurecido(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "0 PV";
+    if (total >= 61 && total <= 65) return "-1 PV";
+    if (total >= 66 && total <= 70) return "-2 PV";
+    if (total >= 71 && total <= 75) return "-3 PV";
+    if (total >= 76 && total <= 80) return "-5 PV";
+    if (total >= 81)                return "-7 PV Crit T";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesEnormeCuero(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-2 PV";
+    if (total >= 66 && total <= 70) return "-4 PV";
+    if (total >= 71 && total <= 75) return "-5 PV";
+    if (total >= 76 && total <= 80) return "-7 PV Crit T";
+    if (total >= 81 && total <= 85) return "-9 PV Crit T";
+    if (total >= 86 && total <= 90) return "-10 PV Crit A";
+    if (total >= 91 && total <= 95) return "-11 PV Crit A";
+    if (total >= 96 && total <= 100) return "-12 PV Crit A";
+    if (total >= 101 && total <= 105) return "-13 PV Crit B";
+    if (total >= 106 && total <= 110) return "-15 PV Crit B";
+    if (total >= 111 && total <= 115) return "-16 PV Crit C";
+    if (total >= 116 && total <= 120) return "-17 PV Crit C";
+    if (total >= 121 && total <= 125) return "-20 PV Crit C";
+    if (total >= 126 && total <= 130) return "-23 PV Crit D";
+    if (total >= 131 && total <= 135) return "-25 PV Crit D";
+    if (total >= 136 && total <= 140) return "-30 PV Crit E";
+    if (total >= 141 && total <= 145) return "-33 PV Crit E";
+    if (total >= 146)                return "-36 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesGrandeCuero(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-2 PV";
+    if (total >= 66 && total <= 70) return "-4 PV";
+    if (total >= 71 && total <= 75) return "-5 PV";
+    if (total >= 76 && total <= 80) return "-7 PV Crit T";
+    if (total >= 81 && total <= 85) return "-9 PV Crit T";
+    if (total >= 86 && total <= 90) return "-10 PV Crit A";
+    if (total >= 91 && total <= 95) return "-11 PV Crit A";
+    if (total >= 96 && total <= 100) return "-12 PV Crit A";
+    if (total >= 101 && total <= 105) return "-13 PV Crit B";
+    if (total >= 106 && total <= 110) return "-15 PV Crit B";
+    if (total >= 111 && total <= 115) return "-16 PV Crit C";
+    if (total >= 116 && total <= 120) return "-17 PV Crit C";
+    if (total >= 121 && total <= 125) return "-20 PV Crit C";
+    if (total >= 126 && total <= 130) return "-23 PV Crit D";
+    if (total >= 131)                return "-25 PV Crit D";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesMedianoCuero(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-2 PV";
+    if (total >= 66 && total <= 70) return "-4 PV";
+    if (total >= 71 && total <= 75) return "-5 PV";
+    if (total >= 76 && total <= 80) return "-7 PV Crit T";
+    if (total >= 81 && total <= 85) return "-9 PV Crit T";
+    if (total >= 86 && total <= 90) return "-10 PV Crit A";
+    if (total >= 91 && total <= 95) return "-11 PV Crit A";
+    if (total >= 96 && total <= 100) return "-12 PV Crit A";
+    if (total >= 101 && total <= 105) return "-13 PV Crit B";
+    if (total >= 106 && total <= 110) return "-15 PV Crit B";
+    if (total >= 111 && total <= 115) return "-16 PV Crit C";
+    if (total >= 116)                return "-17 PV Crit C";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesPequenoCuero(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-2 PV";
+    if (total >= 66 && total <= 70) return "-4 PV";
+    if (total >= 71 && total <= 75) return "-5 PV";
+    if (total >= 76 && total <= 80) return "-7 PV Crit T";
+    if (total >= 81 && total <= 85) return "-9 PV Crit T";
+    if (total >= 86 && total <= 90) return "-10 PV Crit A";
+    if (total >= 91 && total <= 95) return "-11 PV Crit A";
+    if (total >= 96 && total <= 100) return "-12 PV Crit A";
+    if (total >= 101)                return "-13 PV Crit B";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesDiminutoCuero(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "0 PV";
+    if (total >= 51 && total <= 55) return "0 PV";
+    if (total >= 56 && total <= 60) return "-1 PV";
+    if (total >= 61 && total <= 65) return "-2 PV";
+    if (total >= 66 && total <= 70) return "-4 PV";
+    if (total >= 71 && total <= 75) return "-5 PV";
+    if (total >= 76 && total <= 80) return "-7 PV Crit T";
+    if (total >= 81)                return "-9 PV Crit T";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesEnormeSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "-1 PV";
+    if (total >= 51 && total <= 55) return "-2 PV";
+    if (total >= 56 && total <= 60) return "-4 PV";
+    if (total >= 61 && total <= 65) return "-5 PV Crit T";
+    if (total >= 66 && total <= 70) return "-6 PV Crit T";
+    if (total >= 71 && total <= 75) return "-8 PV Crit T";
+    if (total >= 76 && total <= 80) return "-9 PV Crit A";
+    if (total >= 81 && total <= 85) return "-10 PV Crit A";
+    if (total >= 86 && total <= 90) return "-12 PV Crit A";
+    if (total >= 91 && total <= 95) return "-13 PV Crit B";
+    if (total >= 96 && total <= 100) return "-14 PV Crit B";
+    if (total >= 101 && total <= 105) return "-15 PV Crit B";
+    if (total >= 106 && total <= 110) return "-17 PV Crit C";
+    if (total >= 111 && total <= 115) return "-19 PV Crit C";
+    if (total >= 116 && total <= 120) return "-20 PV Crit D";
+    if (total >= 121 && total <= 125) return "-26 PV Crit D";
+    if (total >= 126 && total <= 130) return "-28 PV Crit E";
+    if (total >= 131 && total <= 135) return "-30 PV Crit E";
+    if (total >= 136 && total <= 140) return "-36 PV Crit E";
+    if (total >= 141 && total <= 145) return "-38 PV Crit E";
+    if (total >= 146)                return "-40 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesGrandeSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "-1 PV";
+    if (total >= 51 && total <= 55) return "-2 PV";
+    if (total >= 56 && total <= 60) return "-4 PV";
+    if (total >= 61 && total <= 65) return "-5 PV Crit T";
+    if (total >= 66 && total <= 70) return "-6 PV Crit T";
+    if (total >= 71 && total <= 75) return "-8 PV Crit T";
+    if (total >= 76 && total <= 80) return "-9 PV Crit A";
+    if (total >= 81 && total <= 85) return "-10 PV Crit A";
+    if (total >= 86 && total <= 90) return "-12 PV Crit A";
+    if (total >= 91 && total <= 95) return "-13 PV Crit B";
+    if (total >= 96 && total <= 100) return "-14 PV Crit B";
+    if (total >= 101 && total <= 105) return "-15 PV Crit B";
+    if (total >= 106 && total <= 110) return "-17 PV Crit C";
+    if (total >= 111 && total <= 115) return "-19 PV Crit C";
+    if (total >= 116 && total <= 120) return "-20 PV Crit D";
+    if (total >= 121 && total <= 125) return "-26 PV Crit D";
+    if (total >= 126 && total <= 130) return "-28 PV Crit E";
+    if (total >= 131)                return "-30 PV Crit E";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesMedianoSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "-1 PV";
+    if (total >= 51 && total <= 55) return "-2 PV";
+    if (total >= 56 && total <= 60) return "-4 PV";
+    if (total >= 61 && total <= 65) return "-5 PV Crit T";
+    if (total >= 66 && total <= 70) return "-6 PV Crit T";
+    if (total >= 71 && total <= 75) return "-8 PV Crit T";
+    if (total >= 76 && total <= 80) return "-9 PV Crit A";
+    if (total >= 81 && total <= 85) return "-10 PV Crit A";
+    if (total >= 86 && total <= 90) return "-12 PV Crit A";
+    if (total >= 91 && total <= 95) return "-13 PV Crit B";
+    if (total >= 96 && total <= 100) return "-14 PV Crit B";
+    if (total >= 101 && total <= 105) return "-15 PV Crit B";
+    if (total >= 106 && total <= 110) return "-17 PV Crit C";
+    if (total >= 111 && total <= 115) return "-19 PV Crit C";
+    if (total >= 116)                return "-20 PV Crit D";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesPequenoSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "-1 PV";
+    if (total >= 51 && total <= 55) return "-2 PV";
+    if (total >= 56 && total <= 60) return "-4 PV";
+    if (total >= 61 && total <= 65) return "-5 PV Crit T";
+    if (total >= 66 && total <= 70) return "-6 PV Crit T";
+    if (total >= 71 && total <= 75) return "-8 PV Crit T";
+    if (total >= 76 && total <= 80) return "-9 PV Crit A";
+    if (total >= 81 && total <= 85) return "-10 PV Crit A";
+    if (total >= 86 && total <= 90) return "-12 PV Crit A";
+    if (total >= 91 && total <= 95) return "-13 PV Crit B";
+    if (total >= 96 && total <= 100) return "-14 PV Crit B";
+    if (total >= 101)                return "-15 PV Crit B";
+    return "Sin efecto (rango no definido)";
+  }
+
+  function outcomeGarrasDientesDiminutoSinArmadura(total) {
+    if (total >= 1 && total <= 8)   return "Ataque fallido";
+    if (total >= 9 && total <= 45)  return "0 PV";
+    if (total >= 46 && total <= 50) return "-1 PV";
+    if (total >= 51 && total <= 55) return "-2 PV";
+    if (total >= 56 && total <= 60) return "-4 PV";
+    if (total >= 61 && total <= 65) return "-5 PV Crit T";
+    if (total >= 66 && total <= 70) return "-6 PV Crit T";
+    if (total >= 71 && total <= 75) return "-8 PV Crit T";
+    if (total >= 76 && total <= 80) return "-9 PV Crit A";
+    if (total >= 81)                return "-10 PV Crit A";
     return "Sin efecto (rango no definido)";
   }
 
@@ -722,83 +1242,6 @@ const pdfList = [
       CUERO: outcomeGarrasDientesEnormeCuero,
       SIN_ARMADURA: outcomeGarrasDientesEnormeSinArmadura,
     },
-    AGARRAR_DESEQUILIBRAR_DIMINUTO: {
-      CORAZA: outcomeAgarrarDesequilibrarDiminutoCoraza,
-      COTA_DE_MALLA: outcomeAgarrarDesequilibrarDiminutoCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeAgarrarDesequilibrarDiminutoCueroEndurecido,
-      CUERO: outcomeAgarrarDesequilibrarDiminutoCuero,
-      SIN_ARMADURA: outcomeAgarrarDesequilibrarDiminutoSinArmadura,
-    },
-    AGARRAR_DESEQUILIBRAR_PEQUENO: {
-      CORAZA: outcomeAgarrarDesequilibrarPequenoCoraza,
-      COTA_DE_MALLA: outcomeAgarrarDesequilibrarPequenoCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeAgarrarDesequilibrarPequenoCueroEndurecido,
-      CUERO: outcomeAgarrarDesequilibrarPequenoCuero,
-      SIN_ARMADURA: outcomeAgarrarDesequilibrarPequenoSinArmadura,
-    },
-    AGARRAR_DESEQUILIBRAR_MEDIANO: {
-      CORAZA: outcomeAgarrarDesequilibrarMedianoCoraza,
-      COTA_DE_MALLA: outcomeAgarrarDesequilibrarMedianoCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeAgarrarDesequilibrarMedianoCueroEndurecido,
-      CUERO: outcomeAgarrarDesequilibrarMedianoCuero,
-      SIN_ARMADURA: outcomeAgarrarDesequilibrarMedianoSinArmadura,
-    },
-    AGARRAR_DESEQUILIBRAR_GRANDE: {
-      CORAZA: outcomeAgarrarDesequilibrarGrandeCoraza,
-      COTA_DE_MALLA: outcomeAgarrarDesequilibrarGrandeCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeAgarrarDesequilibrarGrandeCueroEndurecido,
-      CUERO: outcomeAgarrarDesequilibrarGrandeCuero,
-      SIN_ARMADURA: outcomeAgarrarDesequilibrarGrandeSinArmadura,
-    },
-    AGARRAR_DESEQUILIBRAR_ENORME: {
-      CORAZA: outcomeAgarrarDesequilibrarEnormeCoraza,
-      COTA_DE_MALLA: outcomeAgarrarDesequilibrarEnormeCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeAgarrarDesequilibrarEnormeCueroEndurecido,
-      CUERO: outcomeAgarrarDesequilibrarEnormeCuero,
-      SIN_ARMADURA: outcomeAgarrarDesequilibrarEnormeSinArmadura,
-    },
-    HECHIZOS_BASICOS: {
-      CORAZA: outcomeHechizosBasicosCoraza,
-      COTA_DE_MALLA: outcomeHechizosBasicosCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeHechizosBasicosCueroEndurecido,
-      CUERO: outcomeHechizosBasicosCuero,
-      SIN_ARMADURA: outcomeHechizosBasicosSinArmadura,
-    },
-    HECHIZOS_RAYO_DESCARGA: {
-      CORAZA: outcomeHechizosRayoDescargaCoraza,
-      COTA_DE_MALLA: outcomeHechizosRayoDescargaCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeHechizosRayoDescargaCueroEndurecido,
-      CUERO: outcomeHechizosRayoDescargaCuero,
-      SIN_ARMADURA: outcomeHechizosRayoDescargaSinArmadura,
-    },
-    HECHIZOS_RAYO_AGUA: {
-      CORAZA: outcomeHechizosRayoAguaCoraza,
-      COTA_DE_MALLA: outcomeHechizosRayoAguaCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeHechizosRayoAguaCueroEndurecido,
-      CUERO: outcomeHechizosRayoAguaCuero,
-      SIN_ARMADURA: outcomeHechizosRayoAguaSinArmadura,
-    },
-    HECHIZOS_RAYO_HIELO: {
-      CORAZA: outcomeHechizosRayoHieloCoraza,
-      COTA_DE_MALLA: outcomeHechizosRayoHieloCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeHechizosRayoHieloCueroEndurecido,
-      CUERO: outcomeHechizosRayoHieloCuero,
-      SIN_ARMADURA: outcomeHechizosRayoHieloSinArmadura,
-    },
-    HECHIZOS_RAYO_RELAMPAGOS_IGNEOS: {
-      CORAZA: outcomeHechizosRayoRelampagosIgneosCoraza,
-      COTA_DE_MALLA: outcomeHechizosRayoRelampagosIgneosCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeHechizosRayoRelampagosIgneosCueroEndurecido,
-      CUERO: outcomeHechizosRayoRelampagosIgneosCuero,
-      SIN_ARMADURA: outcomeHechizosRayoRelampagosIgneosSinArmadura,
-    },
-    HECHIZOS_DE_BOLA: {
-      CORAZA: outcomeHechizosDeBolaCoraza,
-      COTA_DE_MALLA: outcomeHechizosDeBolaCotaDeMalla,
-      CUERO_ENDURECIDO: outcomeHechizosDeBolaCueroEndurecido,
-      CUERO: outcomeHechizosDeBolaCuero,
-      SIN_ARMADURA: outcomeHechizosDeBolaSinArmadura,
-    },
   };
 
   // Helper por si más adelante quieres lógica extra al resolver la tabla
@@ -819,25 +1262,16 @@ const pdfList = [
     if (!armaduraSelect.value) { alert("Selecciona armadura."); calcResultado.textContent = ""; return; }
 
     const total = tirada + bo - bd;
-
-    // Resolución por mapa (arma → armadura → función)
     const arma = armaSelect.value;
-    const armadura = armaduraSelect.value;
-
+    const armadura = armaduraSelect.value;   
+    
     const fn = getOutcomeFn(arma, armadura);
     if (typeof fn === "function") {
       const resultado = fn(total);
       calcResultado.textContent = `Resultado (${total}) → ${resultado}`;
     } else {
-      if (typeof fn === "function") {
-        const resultado = fn(total);
-        calcResultado.textContent = `Resultado (${total}) → ${resultado}`;
-      } else {
-        calcResultado.textContent = ""; // silencio si no hay tabla
-      }
-
+      calcResultado.textContent = ""; // silencio si no hay tabla
     }
-
   }
 
   calcBtn.addEventListener("click", calcular);
